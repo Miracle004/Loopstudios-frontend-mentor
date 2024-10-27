@@ -1,0 +1,399 @@
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 0%);
+  --Dark-Gray: hsl(0, 0%, 55%);
+  --Very-Dark-Gray: hsl(0, 0%, 41%);
+  --project-font-size: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: josefin sans;
+}
+
+.container {
+  display: grid;
+  gap: 60px;
+}
+
+header {
+  display: grid;
+}
+
+header nav {
+  display: grid;
+  width: 100vw;
+  justify-items: center;
+  color: var(--White);
+  font-weight: 300;
+}
+
+header h1 {
+  width: fit-content;
+  color: var(--White);
+  font-weight: 300;
+  letter-spacing: 1px;
+  border: 1px solid var(--White);
+}
+
+#vr {
+  font-family: alata;
+}
+
+#vr aside {
+  display: grid;
+  background-color: var(--White);
+}
+
+#vr aside span {
+  font-weight: 300;
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: var(--Black);
+}
+
+#vr aside p {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--Very-Dark-Gray);
+}
+
+main {
+  display: grid;
+  font-weight: 300;
+}
+
+main .contentTitle {
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+main .contentTitle p:first-child {
+  font-size: 25px;
+}
+
+main .contentTitle p:last-child {
+  font-family: alata;
+  font-size: 15px;
+  padding: 3px 18px;
+  border: 2px solid;
+}
+
+main section {
+  display: grid;
+  gap: 20px;
+}
+
+main section div {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+main section div:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+main section div p {
+  font-size: 18px;
+  color: var(--White);
+  margin-bottom: 15px;
+}
+
+footer {
+  background-color: var(--Black);
+  color: var(--White);
+  padding: 30px 0;
+}
+
+footer section {
+  display: grid;
+  margin: 0 auto;
+}
+
+footer .moreInfo,
+footer .marketing {
+  display: grid;
+  row-gap: 20px;
+}
+
+footer .moreInfo img {
+  width: 120px;
+}
+
+footer .moreInfo ul {
+  list-style: none;
+  display: flex;
+}
+
+footer section .socials {
+  display: grid;
+}
+
+footer section .socials img {
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+}
+
+footer section .socials img:hover {
+  border-bottom: 2px solid white;
+}
+
+
+@media (max-width: 380px) {
+  header {
+    position: relative;
+    justify-items: center;
+    height: 600px;
+    padding: 20px 0;
+  }
+  header nav {
+    align-items: center;
+    z-index: 1;
+    grid-template-columns: 70% 30%;
+    height: fit-content;
+  }
+
+  header .mobileNavigation{
+    position: absolute;
+     z-index: -1;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  header .mobileNavigation img{
+    position: sticky;
+    top: 26px;
+    left: 310px;
+  }
+
+  header .mobileNavigation ul{
+    display: grid;
+    position: absolute;
+    left: 35px;
+    top: 200px;
+    list-style: none;
+    font-size: 25px;
+    gap: 15px;
+    visibility: hidden;
+    opacity: 0;  
+      }
+  header h1 {
+    font-size: 30px;
+    padding: 20px;
+    height: fit-content;
+  }
+  #vr {
+    display: grid;
+    row-gap: 40px;
+    justify-items: center;
+  }
+  #vr aside{
+    width: 280px;
+    justify-items: center;
+  }
+  #vr img {
+    width: 300px;
+  }
+  main .contentTitle {
+    display: grid;
+    justify-items:center;
+
+
+  }
+  main .contentTitle p:last-child {
+    width: fit-content;
+    position: relative;
+    top: 1190px;
+  }
+  main .contentTitle p:last-child:active {
+    color: var(--White);
+    background-color: var(--Black);
+    transition: background-color 0.2s ease-out;
+  }
+  main section {
+    justify-content: center;
+  }
+  main section div{
+    width: 280px;
+    height: 120px;
+  }
+  main section .earth {
+    background: url(assets/images/mobile/image-deep-earth.jpg) center no-repeat;
+    background-size: contain;
+  }
+  
+  main section .arcade {
+    background: url(assets/images/mobile/image-night-arcade.jpg) center no-repeat;
+    background-size: contain;
+  }
+  
+  main section .soccer {
+    background: url(assets/images/mobile/image-soccer-team.jpg) center no-repeat;
+    background-size: contain;
+  }
+  
+  main section .dGrid {
+    background: url(assets/images/mobile/image-grid.jpg) center no-repeat;
+    background-size: contain;
+  }
+  
+  main section .aboveVr {
+    background: url(assets/images/mobile/image-from-above.jpg) center no-repeat;
+    background-size: contain;
+  }
+  
+  main section .borealis {
+    background: url(assets/images/mobile/image-pocket-borealis.jpg) center no-repeat;
+    background-size: contain;
+  }
+  
+  main section .curiosity {
+    background: url(assets/images/mobile/image-curiosity.jpg) center no-repeat;
+    background-size: contain;
+  }
+  
+  main section .fisheye {
+    background: url(assets/images/mobile/image-fisheye.jpg) center no-repeat;
+    background-size: contain;
+  }
+  footer .moreInfo{
+    justify-content: center;
+    row-gap: 50px;
+  }
+  footer .moreInfo ul {
+    flex-direction: column;
+    place-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  footer section .socials{
+    grid-template-columns: repeat(4, 20px);
+    justify-content: center;
+    gap: 20px;
+  }
+  footer .marketing{
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  body{
+    overflow-x:hidden;
+  }
+  header {
+    row-gap: 70px;
+    padding: 40px 0 70px 0;
+  }
+  header nav {
+    grid-template-columns: 1fr 1.5fr;
+  }
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 30px;
+  }
+
+  ul li {
+    border-bottom: 2px solid transparent;
+  }
+  ul li:hover {
+    cursor: pointer;
+    border-bottom: 2px solid white;
+  }
+
+  header h1 {
+    font-size: 50px;
+    margin-left: 210px;
+    padding: 20px 40px 20px 20px;
+  }
+  #vr {
+    position: relative;
+  }
+
+  #vr img{
+    width: 550px;
+    margin-left: 300px;
+  }
+  #vr aside {
+    width: 450px;
+    position: absolute;
+    z-index: 2;
+    top: 216px;
+    right: 250px;
+    padding: 40px 40px 0 40px;
+  }
+  main {
+    margin-left: 300px;
+    width: 700px;
+  }
+  main .contentTitle {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  main .contentTitle p:last-child:hover {
+    color: var(--White);
+    background-color: var(--Black);
+    transition: background-color 0.2s ease-out;
+    cursor: pointer;
+  }
+  main section {
+    grid-template-columns: repeat(4, 220px);
+  }
+  main section div {
+    width: 220px;
+    height: 300px;
+  }
+  main section .earth {
+    background: url(assets/images/desktop/image-deep-earth.jpg) center no-repeat;
+  }
+  
+  main section .arcade {
+    background: url(assets/images/desktop/image-night-arcade.jpg) center no-repeat;
+  }
+  
+  main section .soccer {
+    background: url(assets/images/desktop/image-soccer-team.jpg) center no-repeat;
+  }
+  
+  main section .dGrid {
+    background: url(assets/images/desktop/image-grid.jpg) center no-repeat;
+  }
+  
+  main section .aboveVr {
+    background: url(assets/images/desktop/image-from-above.jpg) center no-repeat;
+  }
+  
+  main section .borealis {
+    background: url(assets/images/desktop/image-pocket-borealis.jpg) center no-repeat;
+  }
+  
+  main section .curiosity {
+    background: url(assets/images/desktop/image-curiosity.jpg) center no-repeat;
+  }
+  
+  main section .fisheye {
+    background: url(assets/images/desktop/image-fisheye.jpg) center no-repeat;
+  }
+  footer section {
+    width: 940px;
+    gap: 300px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  footer section .marketing {
+    justify-items: right;
+  }
+  footer section .socials{
+    grid-template-columns: repeat(4, auto);
+    gap: 10px;
+  }
+  footer .moreInfo ul{
+    gap: 10px;
+  }
+}
